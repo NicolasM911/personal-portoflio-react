@@ -109,7 +109,8 @@ nav.navbar .navbar-nav .nav-link.navbar-link {
   font-weight: 400;
   color: #fff;
   letter-spacing: 0.8px;
-  padding: 0 25px;
+  line-height: 1.5; /* Espacio entre las líneas de texto */
+  padding: 0 0px;
   font-size: 18px;
   opacity: 0.75;
 }
@@ -165,7 +166,7 @@ span.navbar-text {
   border: 1px solid #fff;
   padding: 18px 34px;
   font-size: 18px;
-  margin-left: 18px;
+  /* margin-left: 18px; */
 	position: relative;
 	background-color: transparent;
 	transition: 0.3s ease-in-out;
@@ -465,12 +466,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin: auto; /* Centra horizontalmente */
   }
 
-  .proj-imgbx::before {
-    height: 100%; /* Mostrar el efecto de hover automáticamente */
-  }
-  .proj-txtx {
-    top: 50%; /* Mostrar la información automáticamente */
-    opacity: 1;
+  .logo {
+    width: 450%;
   }
 
 }
