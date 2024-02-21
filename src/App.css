@@ -76,7 +76,7 @@ input:focus, textarea:focus, select:focus {
 }
 
 p.success {
-	color: green;
+	color: rgb(76, 249, 76);
 }
 
 p.danger {
@@ -277,7 +277,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 96%;
 }
 .banner button {
-  color: #fff;
+  color: #5ce352;
   font-weight: 700;
   font-size: 20px;
   margin-top: 60px;
