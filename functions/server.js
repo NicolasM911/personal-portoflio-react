@@ -1,38 +1,29 @@
-const express = require("express");
-const router = express.Router();
-const cors = require("cors");
 const nodemailer = require("nodemailer");
 
-// server used to send send emails
-const app = express();
-app.use(cors());
-app.use(express.json());
-app.use("/", router);
-app.listen(5000, () => console.log("Server Running"));
-console.log(process.env.EMAIL_USER);
-console.log(process.env.EMAIL_PASS);
+exports.handler = async (event) => {
+  // Configurar transporte de correo electrónico
+  const contactEmail = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: "tecnologia.sistemas11n@gmail.com",
+      pass: "ohtj xect nkpb htrp"
+    },
+  });
 
-const contactEmail = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: "tecnologia.sistemas11n@gmail.com",
-    pass: "ohtj xect nkpb htrp"
-  },
-});
+  // Verificar conexión con el servicio de correo electrónico
+  contactEmail.verify((error) => {
+    if (error) {
+      console.log(error);
+    } else {
+      console.log("Ready to Send");
+    }
+  });
 
-contactEmail.verify((error) => {
-  if (error) {
-    console.log(error);
-  } else {
-    console.log("Ready to Send");
-  }
-});
+  // Parsear los datos de la solicitud
+  const { firstName, lastName, email, message, phone } = JSON.parse(event.body);
+  const name = firstName + ' ' + lastName;
 
-router.post("/contact", (req, res) => {
-  const name = req.body.firstName + req.body.lastName;
-  const email = req.body.email;
-  const message = req.body.message;
-  const phone = req.body.phone;
+  // Configurar el correo electrónico a enviar
   const mail = {
     from: name,
     to: "tecnologia.sistemas11n@gmail.com",
@@ -42,12 +33,18 @@ router.post("/contact", (req, res) => {
            <p>Phone: ${phone}</p>
            <p>Message: ${message}</p>`,
   };
-  contactEmail.sendMail(mail, (error) => {
-    if (error) {
-      res.json(error);
-    } else {
-      res.json({ code: 200, status: "Message Sent" });
-    }
-  });
-});
 
+  try {
+    // Enviar correo electrónico
+    await contactEmail.sendMail(mail);
+    return {
+      statusCode: 200,
+      body: JSON.stringify({ code: 200, status: "Message Sent" }),
+    };
+  } catch (error) {
+    return {
+      statusCode: 500,
+      body: JSON.stringify({ code: 500, error: error.message }),
+    };
+  }
+};

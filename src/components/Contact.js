@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-//import contactImg from "../assets/img/contact-img.svg";
 import contactImg1 from "../assets/img/contact-img1.svg";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -27,10 +26,10 @@ export const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setButtonText("Enviando...");
-    let response = await fetch("https://nicolasportafolio.netlify.app/contact", {
+    let response = await fetch("https://nicolasportafolio.netlify.app/.netlify/functions/server", {
       method: "POST",
       headers: {
-        "Content-Type": "application/json",
+        "Content-Type": "application/json;charset=utf-8",
       },
       body: JSON.stringify(formDetails),
     });
