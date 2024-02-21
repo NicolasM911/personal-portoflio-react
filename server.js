@@ -50,3 +50,11 @@ router.post("/contact", (req, res) => {
     }
   });
 });
+
+// Manejo para cerrar el servidor
+process.on('SIGTERM', () => {
+  console.log('SIGTERM received, shutting down server');
+  server.close(() => {
+    console.log('Server stopped');
+  });
+});
