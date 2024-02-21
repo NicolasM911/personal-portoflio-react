@@ -54,33 +54,33 @@ export const Skills = () => {
                 customTransition="transform 300ms ease-in-out" // Agregar transición personalizada si es necesario
               >
                 <div className="item">
-                  <img src={meter4} alt="Image" className="skill-image" />
+                  <img src={meter4} alt="Image9" className="skill-image" />
                   <h5>Python</h5>
                 </div>
                 <div className="item">
-                  <img src={meter5} alt="Image" className="skill-image" />
+                  <img src={meter5} alt="Image1" className="skill-image" />
                   <h5>Node Js</h5>
                 </div>
                 <div className="item">
-                  <img src={meter6} alt="Image" className="skill-image" />
+                  <img src={meter6} alt="Image2" className="skill-image" />
                   <h5>React Js</h5>
                 </div>
                 <div className="item">
-                  <img src={meter8} alt="Image" className="skill-image" />
+                  <img src={meter8} alt="Image3" className="skill-image" />
                   <h5>JS</h5>
                 </div>
                 <div className="item">
-                  <img src={meter7} alt="Image" className="skill-image" />
+                  <img src={meter7} alt="Image4" className="skill-image" />
                   <h5>Git</h5>
                 </div>
                 <div className="item">
-                  <img src={meter11} alt="Image" className="skill-image" />
+                  <img src={meter11} alt="Image5" className="skill-image" />
                   <h5>DB</h5>
                 </div>
 
               </Carousel>
               <div className="centered-container">
-                <a href="https://www.canva.com/design/DAF5bWLaIkA/4Urw1iC2_K7VE_wi9N9YQg/view?utm_content=DAF5bWLaIkA&utm_campaign=designshare&utm_medium=link&utm_source=editor" target="_blank">
+                <a href="https://www.canva.com/design/DAF5bWLaIkA/4Urw1iC2_K7VE_wi9N9YQg/view?utm_content=DAF5bWLaIkA&utm_campaign=designshare&utm_medium=link&utm_source=editor" target="_blank" rel="noreferrer">
                   Visualizar CV <PersonCircle size={25} />
                 </a>
               </div>
@@ -88,7 +88,7 @@ export const Skills = () => {
           </div>
         </div>
       </div>
-      <img className="background-image-left" src={colorSharp1} alt="Image" />
+      <img className="background-image-left" src={colorSharp1} alt="Image0" />
     </section>
 
   )
