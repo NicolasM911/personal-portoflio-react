@@ -27,10 +27,10 @@ export const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setButtonText("Enviando...");
-    let response = await fetch("https://nicolasportafolio.netlify.app/", {
+    let response = await fetch("https://nicolasportafolio.netlify.app", {
       method: "POST",
       headers: {
-        "Content-Type": "application/json;charset=utf-8",
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(formDetails),
     });
