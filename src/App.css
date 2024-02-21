@@ -110,7 +110,7 @@ nav.navbar .navbar-nav .nav-link.navbar-link {
   color: #fff;
   letter-spacing: 0.8px;
   line-height: 1.5; /* Espacio entre las líneas de texto */
-  padding: 0 0px;
+  padding: 0 20px;
   font-size: 18px;
   opacity: 0.75;
 }
@@ -468,6 +468,20 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
   .logo {
     width: 450%;
+  }
+
+  .footer .logofooter{
+    margin-top: 20px;
+  }
+
+  nav.navbar .navbar-nav .nav-link.navbar-link {
+    font-weight: 400;
+    color: #fff;
+    letter-spacing: 0.8px;
+    line-height: 1.5; /* Espacio entre las líneas de texto */
+    padding: 0 0px;
+    font-size: 18px;
+    opacity: 0.75;
   }
 
 }
