@@ -1,15 +1,4 @@
 [build]
-  # Comando para compilar tu aplicación React
   command = "npm run build"
+  functions = "server.js"  # Especifica aquí el nombre de tu archivo server.js
 
-  # Directorio donde se compila tu aplicación React
-  publish = "build"
-
-  # Configuración específica para funciones si las utilizas
-  # functions = "functions"
-
-# Redirección para que Netlify sirva tu aplicación Node.js
-[[redirects]]
-  from = "/*"
-  to = "/server.js"
-  status = 200
