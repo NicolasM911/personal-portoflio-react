@@ -488,6 +488,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     margin-left: 10px;
   }
 
+  p.sucess p.danger{
+    margin-top: 20px;
+    margin-left: 45px;
+  }
+
 }
 
 
