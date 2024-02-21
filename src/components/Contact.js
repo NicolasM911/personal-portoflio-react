@@ -79,7 +79,7 @@ export const Contact = () => {
                     </Col>
                     {
                       status.message &&
-                      <Col className="message-col">
+                      <Col className="messageC">
                         <p className={status.success === false ? "danger" : "success"}>{status.message}</p>
                       </Col>
                     }

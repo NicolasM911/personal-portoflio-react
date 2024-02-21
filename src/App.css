@@ -444,7 +444,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   .contact img {
     width: 100%;
     margin-bottom: 20px;
-    margin-top: 20px;
+    margin-top: 300px;
   }
 
   .contact button {
@@ -485,15 +485,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     opacity: 0.75;
   }
 
-  .message-col {
+  .messageC {
     margin-left: 10px;
-  }
-
-  p.sucess p.danger{
     margin-top: 20px;
     margin-left: 45px;
   }
-
 }
 
 
