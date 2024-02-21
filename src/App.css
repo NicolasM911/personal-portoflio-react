@@ -484,6 +484,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     opacity: 0.75;
   }
 
+  .message-col {
+    margin-left: 10px;
+  }
+
 }
 
 
