@@ -84,6 +84,7 @@ input:focus, textarea:focus, select:focus {
 
 p.success {
 	color: rgb(76, 249, 76);
+  margin-top: 20px;
 }
 
 p.danger {
