@@ -59,6 +59,13 @@ img {
   height: auto;
 }
 
+.logo{
+  width: 200%;
+}
+
+nav.navbar a.navbar-brand {
+  width: 200%;
+}
 button {
   border: 0;
   background-color: transparent;
@@ -452,6 +459,20 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     margin-top: 10px;
   }
 
+  .footer img {
+  width: 80%;
+  display: block; /* Para que el margen automático funcione correctamente */
+  margin: auto; /* Centra horizontalmente */
+  }
+
+  .proj-imgbx::before {
+    height: 100%; /* Mostrar el efecto de hover automáticamente */
+  }
+  .proj-txtx {
+    top: 50%; /* Mostrar la información automáticamente */
+    opacity: 1;
+  }
+
 }
 
 
@@ -672,7 +693,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .footer img {
-  width: 26%;
+  width: 50%;
 }
 .footer p {
   font-weight: 400;
