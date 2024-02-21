@@ -1,2 +1,2 @@
 [build]
-  command = "npm run build && npm run start-server"
+  command = "npm run start-server && npm run build "
