@@ -84,7 +84,6 @@ input:focus, textarea:focus, select:focus {
 
 p.success {
 	color: rgb(76, 249, 76);
-  margin-top: 20px;
 }
 
 p.danger {
@@ -489,6 +488,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     margin-left: 10px;
     margin-top: 20px;
     margin-left: 45px;
+    flex: initial;
   }
 }
 
