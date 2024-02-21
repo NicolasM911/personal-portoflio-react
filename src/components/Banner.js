@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import headerImg1 from "../assets/img/header-img1.svg";
 import { Envelope } from 'react-bootstrap-icons';
@@ -9,12 +9,25 @@ export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState('');
+ 
   const [delta, setDelta] = useState(300 - Math.random() * 100);
-  const [setIndex] = useState(1);
+  // eslint-disable-next-line 
+  const [index, setIndex] = useState(1);
+  const toRotate = ["Ingeniero Sistemas", "Desarollador Software"];
+  const period = 1000;
 
-  const tick = useCallback(() => {
-    const toRotate = ["Ingeniero Sistemas", "Desarollador Software"];
 
+  useEffect(() => {
+    let ticker = setInterval(() => {
+      tick();
+    }, delta);
+
+    return () => { clearInterval(ticker) };
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [text, delta]);
+
+
+  const tick = () => {
     let i = loopNum % toRotate.length;
     let fullText = toRotate[i];
     let updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1);
@@ -28,7 +41,7 @@ export const Banner = () => {
     if (!isDeleting && updatedText === fullText) {
       setIsDeleting(true);
       setIndex(prevIndex => prevIndex - 1);
-      setDelta(1000);
+      setDelta(period);
     } else if (isDeleting && updatedText === '') {
       setIsDeleting(false);
       setLoopNum(loopNum + 1);
@@ -37,15 +50,7 @@ export const Banner = () => {
     } else {
       setIndex(prevIndex => prevIndex + 1);
     }
-  }, [loopNum, isDeleting, text, setIndex]);
-
-  useEffect(() => {
-    let ticker = setInterval(() => {
-      tick();
-    }, delta);
-
-    return () => { clearInterval(ticker) };
-  }, [delta, tick]);
+  }
 
   return (
     <section className="banner" id="home">
@@ -57,7 +62,9 @@ export const Banner = () => {
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                   <span className="tagline">Bienvenido a mi Portafolio</span>
                   <h1>{`Hola! Soy Nicolás `}</h1>
-                    <span className="txt-rotate" data-rotate='["Ingeniero Sistemas", "Desarollador Software"]' dataPeriod="1000">
+                    <span className="txt-rotate" 
+                    //dataPeriod="1000" 
+                    data-rotate='[ "Ingeniero Sistemas", "Desarollador Software" ]'>
                       <span className="wrap">{text}</span>
                     </span>
                     <p>Ingeniero de Sistemas apasionado por la innovación y la resolución de problemas a través de la tecnología.<br></br>
