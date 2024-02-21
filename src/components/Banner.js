@@ -13,7 +13,7 @@ export const Banner = () => {
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   // eslint-disable-next-line 
   const [index, setIndex] = useState(1);
-  const toRotate = ["Ingeniero Sistemas", "Desarollador Software"];
+  const toRotate = ["Ingeniero Sistemas", "Desarollo Software"];
   const period = 1000;
 
 
