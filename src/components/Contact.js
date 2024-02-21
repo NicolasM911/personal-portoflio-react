@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import contactImg from "../assets/img/contact-img.svg";
+//import contactImg from "../assets/img/contact-img.svg";
 import contactImg1 from "../assets/img/contact-img1.svg";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -37,7 +37,7 @@ export const Contact = () => {
     setButtonText("Enviar");
     let result = await response.json();
     setFormDetails(formInitialDetails);
-    if (result.code == 200) {
+    if (result.code === 200) {
       setStatus({ succes: true, message: 'Message sent successfully'});
     } else {
       setStatus({ succes: false, message: 'Something went wrong, please try again later.'});

@@ -9,10 +9,10 @@ import meter11 from "../assets/img/meter11.svg";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
-import colorSharp from "../assets/img/color-sharp.png"
+//import colorSharp from "../assets/img/color-sharp.png"
 import colorSharp1 from "../assets/img/banner-bg1.png"
 
-import { ArrowRightCircle } from 'react-bootstrap-icons';
+//import { ArrowRightCircle } from 'react-bootstrap-icons';
 import { PersonCircle } from 'react-bootstrap-icons';
 
 export const Skills = () => {
