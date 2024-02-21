@@ -1,4 +1,0 @@
-[build]
-  command = "npm run build"
-  functions = "server.js"  # Especifica aquí el nombre de tu archivo server.js
-
