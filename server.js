@@ -8,7 +8,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use("/", router);
-app.listen(5000, () => console.log("Server Running"));
+const server = app.listen(5000, () => console.log("Server Running"));
 console.log(process.env.EMAIL_USER);
 console.log(process.env.EMAIL_PASS);
 
@@ -48,5 +48,13 @@ router.post("/contact", (req, res) => {
     } else {
       res.json({ code: 200, status: "Message Sent" });
     }
+  });
+});
+
+// Manejo para cerrar el servidor
+process.on('SIGTERM', () => {
+  console.log('SIGTERM received, shutting down server');
+  server.close(() => {
+    console.log('Server stopped');
   });
 });
