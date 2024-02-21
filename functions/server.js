@@ -1,47 +1,53 @@
+const express = require("express");
+const router = express.Router();
+const cors = require("cors");
 const nodemailer = require("nodemailer");
 
-exports.handler = async (event) => {
-  const contactEmail = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-      user: "tecnologia.sistemas11n@gmail.com",
-      pass: "ohtj xect nkpb htrp"
-    },
-  });
+// server used to send send emails
+const app = express();
+app.use(cors());
+app.use(express.json());
+app.use("/", router);
+app.listen(5000, () => console.log("Server Running"));
+console.log(process.env.EMAIL_USER);
+console.log(process.env.EMAIL_PASS);
 
-  contactEmail.verify((error) => {
-    if (error) {
-      console.log(error);
-    } else {
-      console.log("Ready to Send");
-    }
-  });
+const contactEmail = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: "tecnologia.sistemas11n@gmail.com",
+    pass: "ohtj xect nkpb htrp"
+  },
+});
 
-  const data = JSON.parse(event.body);
-  const { firstName, lastName, email, message, phone } = data;
+contactEmail.verify((error) => {
+  if (error) {
+    console.log(error);
+  } else {
+    console.log("Ready to Send");
+  }
+});
 
-  const name = firstName + lastName;
-
+router.post("/contact", (req, res) => {
+  const name = req.body.firstName + req.body.lastName;
+  const email = req.body.email;
+  const message = req.body.message;
+  const phone = req.body.phone;
   const mail = {
     from: name,
     to: "tecnologia.sistemas11n@gmail.com",
     subject: "Contacto desde su Portfolio en React",
-    html: `<p>Message: ${message}</p>
-           <p>Name: ${name}</p>
+    html: `<p>Name: ${name}</p>
            <p>Email: ${email}</p>
-           <p>Phone: ${phone}</p>`,
+           <p>Phone: ${phone}</p>
+           <p>Message: ${message}</p>`,
   };
+  contactEmail.sendMail(mail, (error) => {
+    if (error) {
+      res.json(error);
+    } else {
+      res.json({ code: 200, status: "Message Sent" });
+    }
+  });
+});
 
-  try {
-    await contactEmail.sendMail(mail);
-    return {
-      statusCode: 200,
-      body: JSON.stringify({ message: "Message Sent" }),
-    };
-  } catch (error) {
-    return {
-      statusCode: 500,
-      body: JSON.stringify({ error: error.message }),
-    };
-  }
-};
