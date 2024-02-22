@@ -51,7 +51,7 @@ export const NavBar = () => {
                 <button className="vvd"><span>Contáctame</span></button>
               </HashLink>
               <div className="social-icon">
-                <a href='https://www.linkedin.com/in/nicolasmahecha11/'><img src={navIcon1} alt="" /></a>
+                <a href='https://www.linkedin.com/in/nicolasmahecha11/' target="_blank" rel="noreferrer"><img src={navIcon1} alt="" /></a>
               </div>
             </span>
           </Navbar.Collapse>
