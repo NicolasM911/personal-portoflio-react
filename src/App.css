@@ -307,8 +307,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-left: 25px;
 }
 .banner img {
+  width: 70%; /* Puedes ajustar este valor según lo que desees */
+  margin-left: 20%;
+  border-radius: 40%; /* Esto hará que la imagen tenga forma de círculo */
+  overflow: hidden; /* Asegura que la imagen se recorte para adaptarse al círculo */
   animation: updown 3s linear infinite;
 }
+
 @keyframes updown {
     0% {
         transform: translateY(-20px);

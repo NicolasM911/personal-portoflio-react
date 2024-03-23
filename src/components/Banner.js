@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import headerImg1 from "../assets/img/header-img1.svg";
+import headerImg1 from "../assets/img/foto.png";
 import { Envelope } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -13,7 +13,7 @@ export const Banner = () => {
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   // eslint-disable-next-line 
   const [index, setIndex] = useState(1);
-  const toRotate = ["Ingeniero Sistemas", "Desarollo Software"];
+  const toRotate = ["Ingeniero de Sistemas"];
   const period = 1000;
 
 
