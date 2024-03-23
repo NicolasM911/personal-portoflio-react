@@ -14,7 +14,7 @@ export const Banner = () => {
   // eslint-disable-next-line 
   const [index, setIndex] = useState(1);
   const toRotate = ["Ingeniero de Sistemas"];
-  const period = 1000;
+  const period = 3000;
 
 
   useEffect(() => {
@@ -61,7 +61,7 @@ export const Banner = () => {
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                   <span className="tagline">Bienvenido a mi Portafolio</span>
-                  <h1>{`Hola! Soy Nicolás `}</h1>
+                  <h1>{`Hola! Soy Nicolás Mahecha`}</h1>
                     <span className="txt-rotate" 
                     //dataPeriod="1000" 
                     data-rotate='[ "Ingeniero Sistemas", "Desarollador Software" ]'>
