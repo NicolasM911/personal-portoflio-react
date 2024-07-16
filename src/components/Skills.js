@@ -43,7 +43,13 @@ export const Skills = () => {
           <div className="col-12">
             <div className="skill-bx wow zoomIn">
               <h2>Conocimientos</h2>
-              <p>Soy un estudiante autodidacta desarrollando habilidades en las siguientes tecnologías..</p>
+              <p>Soy un estudiante autodidacta desarrollando habilidades en las siguientes tecnologías, puedes visualizar mi CV.</p>
+
+              <div className="centered-container">
+                <a href="https://drive.google.com/file/d/1Jfj65j_naQ1cMS9jbH-Q7t8aT5nvrTG0/view?usp=sharing" target="_blank" rel="noreferrer">
+                  Visualizar CV <PersonCircle size={25} />
+                </a>
+              </div>
 
               <Carousel
                 responsive={responsive}
@@ -79,11 +85,7 @@ export const Skills = () => {
                 </div>
 
               </Carousel>
-              <div className="centered-container">
-                <a href="https://drive.google.com/file/d/1Jfj65j_naQ1cMS9jbH-Q7t8aT5nvrTG0/view?usp=sharing" target="_blank" rel="noreferrer">
-                  Visualizar CV <PersonCircle size={25} />
-                </a>
-              </div>
+
             </div>
           </div>
         </div>
