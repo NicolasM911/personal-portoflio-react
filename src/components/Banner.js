@@ -73,11 +73,11 @@ export const Banner = () => {
                   <p>Actualmente estoy participando en el programa de formación Talento Tech del Ministerio de Tecnologías de la Información y las Comunicaciones (MinTIC) de Colombia. Estoy cursando el currículum de Inteligencia Artificial.</p>
                   <p>Tambien estoy en el proceso de formación Backend de Alura Latam + Oracle One.</p>
                   <button onClick={() => window.location.href = '#connect'}>Contáctame <Envelope size={25} /></button>
-                  <div>
+                  {/* <div>
                     <a href="https://drive.google.com/file/d/1Jfj65j_naQ1cMS9jbH-Q7t8aT5nvrTG0/view?usp=sharing" target="_blank" rel="noreferrer">
                       Visualizar CV <PersonCircle size={25} />
                     </a>
-                  </div>
+                  </div> */}
                 </div>}
             </TrackVisibility>
           </Col>
