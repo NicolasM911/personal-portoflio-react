@@ -491,6 +491,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     margin-top: 10px;
   }
 
+  .banner a{
+    margin-left: auto; /* Establece el margen izquierdo en automático */
+    margin-right: auto; /* Establece el margen derecho en automático */
+    display: block; /* Hace que el botón se comporte como un bloque para que ocupe todo el ancho disponible */
+    margin-bottom: 25px;
+    margin-top: 10px;
+  }
+
   .footer img {
   width: 80%;
   display: block; /* Para que el margen automático funcione correctamente */
