@@ -74,7 +74,7 @@ export const Banner = () => {
                   <p>Tambien estoy en el proceso de formación Backend de Alura Latam + Oracle One.</p>
                   <button onClick={() => window.location.href = '#connect'}>Contáctame <Envelope size={25} /></button>
                   <div>
-                    <a href="/assets/docs/Cv_nicolas.pdf" target="_blank" rel="noreferrer">
+                    <a href="../assets/docs/Cv_nicolas.pdf" target="_blank" rel="noreferrer">
                       Visualizar CV <PersonCircle size={25} />
                     </a>
                   </div>
