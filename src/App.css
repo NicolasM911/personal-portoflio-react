@@ -322,6 +322,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.8px;
   display: flex;
   text-decoration: none; /* Elimina el subrayado */
+  align-items: center;
 }
 
 .banner a svg {
@@ -338,6 +339,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner a:hover svg {
   margin-left: 25px;
 }
+
 
 @keyframes updown {
     0% {
