@@ -4,12 +4,13 @@ import headerImg1 from "../assets/img/foto.png";
 import { Envelope } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import { PersonCircle } from 'react-bootstrap-icons';
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState('');
- 
+
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   // eslint-disable-next-line 
   const [index, setIndex] = useState(1);
@@ -23,7 +24,7 @@ export const Banner = () => {
     }, delta);
 
     return () => { clearInterval(ticker) };
-      // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [text, delta]);
 
 
@@ -62,16 +63,21 @@ export const Banner = () => {
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                   <span className="tagline">Bienvenido a mi Portafolio</span>
                   <h1>{`Hola! Soy Nicolás Mahecha`}</h1>
-                    <span className="txt-rotate" 
+                  <span className="txt-rotate"
                     //dataPeriod="1000" 
                     data-rotate='[ "Ingeniero Sistemas", "Desarollador Software" ]'>
-                      <span className="wrap">{text}</span>
-                    </span>
-                    <p>Ingeniero de Sistemas apasionado por la innovación y la resolución de problemas a través de la tecnología.<br></br>
+                    <span className="wrap">{text}</span>
+                  </span>
+                  <p>Ingeniero de Sistemas apasionado por la innovación y la resolución de problemas a través de la tecnología.<br></br>
                     Soy una persona autodidacta, perseverante y comprometido con los objetivos, siempre dispuesto aprender de nuevas tecnologías y metodologías de desarrollo.</p>
-                    <p>Actualmente estoy participando en el programa de formación Talento Tech del Ministerio de Tecnologías de la Información y las Comunicaciones (MinTIC) de Colombia. Estoy cursando el currículum de Inteligencia Artificial.</p>
-                    <p>Tambien estoy en el proceso de formación Backend de Alura Latam + Oracle One.</p>
-                    <button onClick={() => window.location.href='#connect'}>Contáctame <Envelope size={25} /></button>
+                  <p>Actualmente estoy participando en el programa de formación Talento Tech del Ministerio de Tecnologías de la Información y las Comunicaciones (MinTIC) de Colombia. Estoy cursando el currículum de Inteligencia Artificial.</p>
+                  <p>Tambien estoy en el proceso de formación Backend de Alura Latam + Oracle One.</p>
+                  <button onClick={() => window.location.href = '#connect'}>Contáctame <Envelope size={25} /></button>
+                  <div>
+                    <a href="/assets/docs/CV NICOLAS MAHECHA ES.pdf" target="_blank" rel="noreferrer">
+                      Visualizar CV <PersonCircle size={25} />
+                    </a>
+                  </div>
                 </div>}
             </TrackVisibility>
           </Col>
