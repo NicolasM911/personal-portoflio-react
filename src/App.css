@@ -332,7 +332,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .banner a:hover {
-  color: #ffffff;
+  /* color: #ffffff; */
+  color:  #02AAC8;
 }
 .banner a:hover svg {
   margin-left: 25px;

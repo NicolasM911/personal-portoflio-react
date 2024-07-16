@@ -80,7 +80,7 @@ export const Skills = () => {
 
               </Carousel>
               <div className="centered-container">
-                <a href="../../assets/docs/Cv_nicolas.pdf" target="_blank" rel="noreferrer">
+                <a href="https://drive.google.com/file/d/1Jfj65j_naQ1cMS9jbH-Q7t8aT5nvrTG0/view?usp=sharing" target="_blank" rel="noreferrer">
                   Visualizar CV <PersonCircle size={25} />
                 </a>
               </div>
