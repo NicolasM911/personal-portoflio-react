@@ -4,7 +4,7 @@ import headerImg1 from "../assets/img/foto.png";
 import { Envelope } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
-import { PersonCircle } from 'react-bootstrap-icons';
+// import { PersonCircle } from 'react-bootstrap-icons';
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);

@@ -386,6 +386,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     letter-spacing: 0.8px;
     line-height: 1.5em;
     margin: 14px 0 75px 0;
+    margin-bottom: 1%;
 }
 .skill-slider {
   width: 80%;
@@ -405,7 +406,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .centered-container {
   display: flex;
-  justify-content: center; /* Centra horizontalmente */
+  justify-content: center; /* Centrado horizontal */
+  align-items: center; /* Centrado vertical */
+  margin-bottom: 22%;
 }
 
 
@@ -491,13 +494,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     margin-top: 10px;
   }
 
-  .banner a{
-    margin-left: auto; /* Establece el margen izquierdo en automático */
-    margin-right: auto; /* Establece el margen derecho en automático */
-    display: block; /* Hace que el botón se comporte como un bloque para que ocupe todo el ancho disponible */
-    margin-bottom: 25px;
-    margin-top: 10px;
-  }
 
   .footer img {
   width: 80%;
