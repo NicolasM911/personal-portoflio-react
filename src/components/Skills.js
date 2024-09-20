@@ -83,9 +83,7 @@ export const Skills = () => {
                   <img src={meter11} alt="Image5" className="skill-image" />
                   <h5>DB</h5>
                 </div>
-
               </Carousel>
-
             </div>
           </div>
         </div>
