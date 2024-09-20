@@ -69,9 +69,8 @@ export const Banner = () => {
                     <span className="wrap">{text}</span>
                   </span>
                   <p>Ingeniero de Sistemas apasionado por la innovación y la resolución de problemas a través de la tecnología.<br></br>
-                    Soy una persona autodidacta, perseverante y comprometido con los objetivos, siempre dispuesto aprender de nuevas tecnologías y metodologías de desarrollo.</p>
-                  <p>Actualmente estoy participando en el programa de formación Talento Tech del Ministerio de Tecnologías de la Información y las Comunicaciones (MinTIC) de Colombia. Estoy cursando el currículum de Inteligencia Artificial.</p>
-                  <p>Tambien estoy en el proceso de formación Backend de Alura Latam + Oracle One.</p>
+                    Soy una persona autodidacta, perseverante y comprometido con los objetivos, siempre dispuesto aprender de nuevas tecnologías y metodologías de desarrollo.
+                  </p>
                   <button onClick={() => window.location.href = '#connect'}>Contáctame <Envelope size={25} /></button>
                   {/* <div>
                     <a href="https://drive.google.com/file/d/1Jfj65j_naQ1cMS9jbH-Q7t8aT5nvrTG0/view?usp=sharing" target="_blank" rel="noreferrer">

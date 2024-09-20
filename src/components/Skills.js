@@ -43,7 +43,7 @@ export const Skills = () => {
           <div className="col-12">
             <div className="skill-bx wow zoomIn">
               <h2>Conocimientos</h2>
-              <p>Soy un estudiante autodidacta desarrollando habilidades en las siguientes tecnologías, puedes visualizar mi CV.</p>
+              <p>Soy un estudiante en ultimo semestre con conocimientos en diferentes tecnologias, puedes visualizar mi CV.</p>
 
               <div className="centered-container">
                 <a href="https://drive.google.com/file/d/1Jfj65j_naQ1cMS9jbH-Q7t8aT5nvrTG0/view?usp=sharing" target="_blank" rel="noreferrer">
