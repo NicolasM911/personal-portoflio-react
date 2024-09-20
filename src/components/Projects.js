@@ -43,12 +43,12 @@ export const Projects = () => {
                     <Nav.Item>
                       <Nav.Link eventKey="projects">Proyectos</Nav.Link>
                     </Nav.Item>
-                    {/* <Nav.Item>
+                    <Nav.Item>
                       <Nav.Link eventKey="second">Backend</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
                       <Nav.Link eventKey="third">Otros</Nav.Link>
-                    </Nav.Item> */}
+                    </Nav.Item>
                   </Nav>
                   <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
                     <Tab.Pane eventKey="projects">
@@ -65,12 +65,12 @@ export const Projects = () => {
                         }
                       </Row>
                     </Tab.Pane>
-                    {/* <Tab.Pane eventKey="second">
+                    <Tab.Pane eventKey="second">
                       <p>Actualizando...</p>
                     </Tab.Pane>
                     <Tab.Pane eventKey="third">
                       <p>Actualizando...</p>
-                    </Tab.Pane> */}
+                    </Tab.Pane>
                   </Tab.Content>
                 </Tab.Container>
               </div>}
